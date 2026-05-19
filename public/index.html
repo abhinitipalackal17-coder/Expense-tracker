@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header>
+        <h1>Expense Tracker</h1>
+        <p>Track your personal spending with a local database.</p>
+      </header>
+
+      <section class="form-panel">
+        <h2>Add a new expense</h2>
+        <form id="expense-form">
+          <label>
+            Title
+            <input type="text" id="title" required />
+          </label>
+          <label>
+            Amount
+            <input type="number" id="amount" step="0.01" min="0" required />
+          </label>
+          <label>
+            Category
+            <input type="text" id="category" placeholder="Food, Transport, Bills..." />
+          </label>
+          <label>
+            Date
+            <input type="date" id="date" required />
+          </label>
+          <button type="submit">Save expense</button>
+        </form>
+      </section>
+
+      <section class="list-panel">
+        <div class="list-header">
+          <h2>Saved expenses</h2>
+          <span id="total">Total: $0.00</span>
+        </div>
+        <div id="expense-list" class="expense-list"></div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
